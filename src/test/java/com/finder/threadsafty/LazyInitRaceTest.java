@@ -1,12 +1,9 @@
 package com.finder.threadsafty;
 
 import org.junit.Test;
-import org.omg.IOP.ENCODING_CDR_ENCAPS;
-
 import java.util.Date;
 import java.util.concurrent.CountDownLatch;
 
-import static org.junit.Assert.*;
 
 /**
  * Created by Finder Hu on 2017/6/7.
