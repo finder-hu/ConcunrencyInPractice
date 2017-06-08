@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.concurrent.CountDownLatch;
 
 import static org.junit.Assert.*;
@@ -16,9 +17,9 @@ import static org.junit.Assert.*;
 public class UnsafeCountingTest {
 
     private final CountDownLatch startGate = new CountDownLatch(1);
-    private static final int nThreads = 1000;   //当该值取1000时几乎每次都会出现竞争情况。
+    private static final int nThreads = 2000;   //当该值取2000时几乎每次都会出现竞争情况。
     private final CountDownLatch endGate = new CountDownLatch(nThreads);
-    private Set<Long> results = new HashSet<Long>();
+    private ConcurrentSkipListSet<Long> results = new ConcurrentSkipListSet<>();
 
     @Test
     public void increase() throws Exception {
