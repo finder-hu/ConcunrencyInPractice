@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
  */
 public class UnsafeCachingTest {
     private final ConcurrentLinkedQueue<List<Integer>> results = new ConcurrentLinkedQueue<>();
-    // FIXME: 2017/6/9 为什么当线程个数超过100是就不会发生错误。
+    // FIXME: 2017/6/9 为什么当线程个数超过100是就不会发生错误。并且使用maven.test运行测试用例是该用例会失败。
     private int threads = 100;
 
     @Test
@@ -58,11 +58,11 @@ public class UnsafeCachingTest {
             Integer number = list.get(0);
             Integer result = list.get(1);
             if ((number == result - 1) || (number == result + 3)) {
-                System.out.println(number + " " + result);
+//                System.out.println(number + " " + result);
                 flag = true;
             }
         }
-        System.out.println(results.size());
+//        System.out.println(results.size());
         assertTrue(flag);
     }
 

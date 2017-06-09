@@ -16,7 +16,7 @@ import static org.junit.Assert.*;
  */
 public class LazyInitRaceTest {
 
-    private int nThreads = 200;
+    private int nThreads = 100;
     private final CountDownLatch startGate = new CountDownLatch(1);
     private final CountDownLatch endGate = new CountDownLatch(nThreads);
     private Set<Date> results = new ConcurrentSkipListSet<Date>();
