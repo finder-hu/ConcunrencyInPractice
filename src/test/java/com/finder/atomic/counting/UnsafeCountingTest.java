@@ -1,9 +1,7 @@
-package com.finder.counting;
+package com.finder.atomic.counting;
 
 import org.junit.Test;
 
-import java.util.HashSet;
-import java.util.Set;
 import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.concurrent.CountDownLatch;
 

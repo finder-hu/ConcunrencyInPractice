@@ -1,6 +1,7 @@
 package com.finder;
 
-import com.finder.threadsafty.LazyInitRace;
+
+import com.finder.atomic.threadsafty.LazyInitRace;
 
 import java.util.Date;
 
@@ -9,8 +10,15 @@ import java.util.Date;
  */
 public class App {
     public static void main(String[] args) {
-        Integer a = 0;
-        Date date = LazyInitRace.getInstance();
-        System.out.println(date.toString());
+        Thread t = new Thread() {
+            @Override
+            public void run() {
+                System.out.println("thread");
+            }
+        };
+        t.start();
+//        Integer a = 0;
+//        Date date = LazyInitRace.getInstance();
+//        System.out.println(date.toString());
     }
 }

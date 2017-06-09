@@ -1,4 +1,4 @@
-package com.finder.threadsafty;
+package com.finder.atomic.threadsafty;
 
 import java.util.Date;
 

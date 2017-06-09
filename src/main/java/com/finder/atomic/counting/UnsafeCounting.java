@@ -1,4 +1,4 @@
-package com.finder.counting;
+package com.finder.atomic.counting;
 
 /**
  * Created by Finder Hu on 2017/6/7.

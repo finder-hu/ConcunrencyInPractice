@@ -1,4 +1,4 @@
-package com.finder.counting;
+package com.finder.atomic.counting;
 
 import java.util.concurrent.atomic.AtomicLong;
 
